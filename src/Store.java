@@ -6,25 +6,19 @@ class Store {
         public String userid;
         public String name;
         public String password;
-
         public Login(String userid, String name, String password) {
             this.userid = userid;
             this.name = name;
             this.password = password;
         }
-
         public Login() {
-
         }
     }
-
     class Home {
         int index = 0;
         Scanner scanner = new Scanner(System.in);
         Login login[] = new Login[50];
-
         StoreDetails sd=new StoreDetails();
-
         public void process1() {
             setupSample();
             while (true) {
@@ -46,17 +40,13 @@ class Store {
                 }
             }
         }
-
         private void setupSample() {
             login[index++] = new Login("admin", "Admin", "manager");
             login[index++] = new Login("suneel", "Suneel G", "suneel");
-
         }
-
         void login() {
             setupSample();
             while (true) {
-
                 System.out.println("1.Admin");
                 System.out.println("2.User");
                 System.out.println("3.Back");
@@ -344,7 +334,6 @@ class Store {
     }
     public static void main(String arg[]) {
         Store store = new Store();
-
         store.home=store.new Home();
         store.home.process1();
     }
