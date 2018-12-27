@@ -230,6 +230,7 @@ class Store {
             int orderid;
             String item_name;
             void print() {
+                orderid++;
                 System.out.println("------------------------------");
                 System.out.println("Order ID   "+orderid);
                 for (int i = 0; i < addItems.items.length; i++) {
@@ -287,13 +288,14 @@ class Store {
                 String name = scanner.next();
                 System.out.println("Enter the how many product");
                 int quantity = scanner.nextInt();
-                order1.orderid++;
+
                 order1.item_name=name;
                 order[s]=order1;
                 s++;
                 for (int i = 0; i < addItems.items.length; i++) {
                     if (addItems.items[i] != null&&order[i]!=null) {
                         if (addItems.items[i].name.equals(name)) {
+
                             addItems.items[i].quantity = quantity;
                             order[i].print();
                         }
